@@ -43,7 +43,7 @@ jobs:
             az account set --subscription be205155-02f7-40e6-b005-1faca67f9160
             az group create --location WestEurope --name ${{env.RG_Name}}
         
-      - name: deploy bicep
+      - name: deploy sa
         uses: azure/arm-deploy@v1
         id: deploy-sa
         with:
@@ -58,4 +58,4 @@ jobs:
           deploymentName: ${{github.run_number}}
           resourceGroupName: ${{env.RG_Name}}
           template: ./blobcontainer.bicep
-          parameter: mysaname=${{steps.deploy-sa.outputs.mysaname}}
+          parameters: mysaname=${{steps.deploy-sa.outputs.mysaname}}
