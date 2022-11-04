@@ -35,7 +35,7 @@ jobs:
       - name: sign in to Azure
         uses: azure/login@v1
         with:
-          cred: ${{secrets.AZURE_CREDENTIAL}}
+          creds: ${{secrets.AZURE_CREDENTIAL}}
       - name: create RG
         uses: azure/cli@v1
         with:
