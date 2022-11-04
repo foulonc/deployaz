@@ -16,7 +16,7 @@ jobs:
     runs-on: ubuntu-latest
     environment: Development
     env:
-      RG_Name: RG20-DEV
+      RG_Name: cfln-RG20-DEV
     steps:
       - name: checkout
         uses: actions/checkout@v3
@@ -44,7 +44,7 @@ jobs:
     needs: [deploy-dev]
     environment: production
     env:
-      RG_Name: RG30-PROD
+      RG_Name: cfln-RG30-PROD
     steps:
       - name: checkout
         uses: actions/checkout@v3
