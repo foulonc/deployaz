@@ -35,7 +35,7 @@
             "level": "warning"
           },
           "no-hardcoded-location": {
-            "level": "error"
+            "level": "warning"
           }
         }
       }
