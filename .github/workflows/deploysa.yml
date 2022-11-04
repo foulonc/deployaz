@@ -48,7 +48,7 @@ jobs:
         id: deploy-sa
         with:
           deploymentName: ${{github.run_number}}
-          resrouceGroupName: ${{env.RG_Name}}
+          resourceGroupName: ${{env.RG_Name}}
           template: ./storage.bicep
 
 
